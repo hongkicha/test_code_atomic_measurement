@@ -1,0 +1,51 @@
+import os
+SConscript('../iotivity/build_common/SConscript')
+Import('env')
+server_env = env.Clone()
+
+#server_env.AppendUnique(CXXFLAGS=['-std=c++11'])
+
+server_env.AppendUnique(CPPPATH=[
+    '../iotivity/resource/csdk/logger/include',
+    '../iotivity/resource/csdk/include',
+    '../iotivity/resource/csdk/stack/include',
+    '../iotivity/resource/csdk/security/include',
+    '../iotivity/resource/oc_logger/include',
+    '../iotivity/resource/csdk/include',
+    '../iotivity/resource/c_common',
+    '../iotivity/resource/c_common/oic_malloc/include',
+    '../iotivity/resource/c_common/oic_string/include',
+    '../iotivity/out/linux/x86_64/release/include/c_common'
+])
+
+server_env.AppendUnique(LIBPATH=[
+    '../iotivity/out/linux/x86_64/release'
+])
+
+server_env.AppendUnique(CXXFLAGS=['-std=c++0x', '-Wall', '-pthread'])
+server_env.AppendUnique(LIBS=['pthread'])
+server_env.Append(LINKFLAGS=['-Wl,--no-as-needed'])
+server_env.PrependUnique(LIBS=['c_common'])
+server_env.PrependUnique(LIBS=['logger'])
+server_env.PrependUnique(LIBS=['octbstack'])
+server_env.AppendUnique(LIBS=['mbedtls', 'mbedx509', 'mbedcrypto'])
+server_env.AppendUnique(CPPDEFINES=['TB_LOG'])
+
+#server_env.AppendUnique(LIBS=['wiringPi'])
+
+#ocserverbasicops = server_env.Program(
+#    'ocserverbasicops', ['common.cpp', 'ocserverbasicops.cpp'])
+#occlientbasicops = server_env.Program(
+#    'occlientbasicops', ['common.cpp', 'occlientbasicops.cpp'])
+
+# ETRI
+server = server_env.Program(
+    'server', [
+        'common.cpp', 
+
+        'device/bloodpressure0.cpp',
+        'device/bloodpressure1.cpp',
+        'device/bloodpressure2.cpp',
+
+        'server.cpp'
+        ])
