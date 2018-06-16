@@ -14,7 +14,7 @@ OS: Ubuntu 16.04 LTS
 1. Create a folder under the same path with IoTivity 1.3.1. (App: /home/hongki/test_code_atomic_measurement, IoTivity: /home/hongki/iotivity)
 2. Clone or copy files of this repository to the created folder
 3. Type ./start.sh to build and run the app
-4. If CTT prompts "Please initiate device to revert to read for OTM", replace server.dat with RFOTM/server.dat
+4. If CTT prompts "Please initiate device to revert to read for OTM", stop the app, replace server.dat with RFOTM/server.dat, run the app again, and then press OK
 
 ## Important Files
 
