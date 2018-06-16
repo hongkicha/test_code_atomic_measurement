@@ -1,6 +1,6 @@
 # test_code_atomic_measurement
 
-This application is a reference implementation of Atomic Measurement, which is mainly used by OCF healthcare Device Types.
+This blood pressure monitor application is a reference implementation of Atomic Measurement, a key feature supported by OCF healthcare Device Types.
 - OCF: https://openconnectivity.org/
 
 It is an APPLICATION-level code which uses and is built on top of IoTivity 1.3.1.
