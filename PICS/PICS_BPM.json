@@ -16,5 +16,5 @@
     "RDPublishCapability": false,
     "SSIDEnrollee": "",
     "PasswordEnrollee": "",
-	"atomicMeasurements": ["oic.r.blood.pressure", "oic.r.pulserate"]
+    "atomicMeasurements": ["oic.r.blood.pressure", "oic.r.pulserate"]
 }
