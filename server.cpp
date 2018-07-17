@@ -104,8 +104,8 @@ const char *gSystemTime = "2011-08-30T13:22:53.108Z";
 const char *gDeviceTypeBloodPressure = "oic.d.bloodpressuremonitor";
 const char *gDeviceNameBloodPressure = "Blood Pressure Monitor";
 
-const char *gSpecVersion = "ocf.1.1.0";
-const char *gDataModelVersions = "ocf.res.1.1.0,ocf.sh.1.1.0";
+const char *gSpecVersion = "ocf.1.3.0";
+const char *gDataModelVersions = "ocf.res.1.3.0, ocf.sh.1.3.0";
 const char *gProtocolIndependentID = "12341234-1234-1234-1234-123412341234";
 
 OCPlatformInfo platformInfo;
